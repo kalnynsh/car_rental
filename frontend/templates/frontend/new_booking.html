@@ -1,0 +1,15 @@
+{% extends "carrental/base.html." %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h1>Our Cars</h1>
+
+<h1>Book {{ car.name }}</h1>
+<form action="" method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="" value="Create Booking">
+</form>
+
+{% endblock %}
