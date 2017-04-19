@@ -15,7 +15,7 @@
     "pk": 2,
     "fields": {
       "name": "Toyota Camry",
-      "image": "car_images/toyota-camry.jpg",
+      "image": "car_images/toyota-camry.png",
       "description": "The Toyota Camry is an economy car suitable for most people",
       "daily_rent": 100,
       "is_available": true

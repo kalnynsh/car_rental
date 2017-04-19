@@ -25,7 +25,7 @@ class Booking(models.Model):
 
     customer_name = models.CharField(max_length=100)
     customer_email = models.EmailField()
-    customer_phone_number = models.TextField()
+    customer_phone_number = models.CharField(max_length=100)
 
     booking_start_date = models.DateField()
     booking_end_date = models.DateField()
