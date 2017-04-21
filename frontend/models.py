@@ -16,6 +16,9 @@ class Car(models.Model):
 
     is_available = models.BooleanField()
 
+    def __str__(self):
+        return self.name
+
     def get_absolute_url(self):
         return reverse('car-details', kwargs={'pk': self.pk})
 
