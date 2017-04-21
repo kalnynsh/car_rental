@@ -15,6 +15,8 @@ class BookingModelAdmin(admin.ModelAdmin):
 
     search_fields = ['customer_name']
 
+    list_editable = ['is_approved']
+
 
 admin.site.register(Car)
 admin.site.register(Booking, BookingModelAdmin)
