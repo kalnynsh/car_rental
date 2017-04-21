@@ -10,7 +10,10 @@ class BookingModelAdmin(admin.ModelAdmin):
         'booking_end_date',
         'is_approved',
     ]
+
     list_filter = ['is_approved']
+
+    search_fields = ['customer_name']
 
 
 admin.site.register(Car)
