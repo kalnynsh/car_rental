@@ -3,10 +3,6 @@ from frontend.models import Car
 from frontend.models import Booking
 
 
-admin.site.register(Car)
-admin.site.register(Booking)
-
-
 class BookingModelAdmin(admin.ModelAdmin):
     list_display = [
         'customer_name',
@@ -14,3 +10,7 @@ class BookingModelAdmin(admin.ModelAdmin):
         'booking_end_date',
         'is_approved',
     ]
+
+
+admin.site.register(Car)
+admin.site.register(Booking, BookingModelAdmin)
