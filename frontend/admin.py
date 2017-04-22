@@ -25,7 +25,7 @@ class BookingModelAdmin(admin.ModelAdmin):
                 email_body = """Dear {},
         We are pleased to inform you that your booking has been approved.
         Thanks
-                """.format(booking.customer_name)
+        """.format(booking.customer_name)
             else:
                 email_body = """Dear {},
         Unfortunately we do not have the capacity right now to accept your
@@ -33,7 +33,8 @@ class BookingModelAdmin(admin.ModelAdmin):
         Thanks
         """.format(booking.customer_name)
 
-                print(email_body)
+            print(email_body)
+        self.message_user(self, 'Emails were send successfully')
 
     email_customers.short_description = "" \
         "Send email customer with approved or not message"
