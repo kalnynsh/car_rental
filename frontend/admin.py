@@ -34,10 +34,12 @@ class BookingModelAdmin(admin.ModelAdmin):
         """.format(booking.customer_name)
 
             print(email_body)
-        self.message_user(self, 'Emails were send successfully')
+
+        self.message_user(request, 'Emails were send successfully')
 
     email_customers.short_description = "" \
-        "Send email customer with approved or not message"
+        "Send email about booking status to customers"
+
 
 admin.site.register(Car)
 admin.site.register(Booking, BookingModelAdmin)
